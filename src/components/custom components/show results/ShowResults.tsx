@@ -53,18 +53,18 @@ const ShowResults = (props: ShowResultsPropsType) => {
     let api: string;
     if (props.type === "category") {
       if (param.category === "All Games") {
-        api = `http://localhost:5000/get-all-games/${page}`;
+        api = `https://gamestore-api.onrender.com/get-all-games/${page}`;
       } else {
-        api = `http://localhost:5000/get-categoty-games/${param.category}/${page}`;
+        api = `https://gamestore-api.onrender.com/get-categoty-games/${param.category}/${page}`;
       }
     }
 
     if (props.type === "discount") {
-      api = `http://localhost:5000/get-all-discount/${page}`;
+      api = `https://gamestore-api.onrender.com/get-all-discount/${page}`;
     }
 
     if (props.type === "search") {
-      api = `http://localhost:5000/search-all-games/${param.search_key}/${page}`;
+      api = `https://gamestore-api.onrender.com/search-all-games/${param.search_key}/${page}`;
     }
 
     await axios

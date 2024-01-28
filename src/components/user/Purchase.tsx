@@ -36,7 +36,9 @@ const Purchase = () => {
 
   const getGameData = async () => {
     await axios
-      .get(`http://localhost:5000/get-game-data/${param.game_title}`)
+      .get(
+        `https://gamestore-api.onrender.com/get-game-data/${param.game_title}`
+      )
       .then((res) => {
         if (res.data.title) {
           let price;
@@ -63,7 +65,9 @@ const Purchase = () => {
   const paymentHandler = async () => {
     setShowPaymentProcess(true);
     let response = await axios.get(
-      `http://localhost:5000/get-user-data/${localStorage.getItem("user")}`
+      `https://gamestore-api.onrender.com/get-user-data/${localStorage.getItem(
+        "user"
+      )}`
     );
 
     if (gameData.price! > response.data.balance) {
@@ -74,17 +78,19 @@ const Purchase = () => {
       setShowFailModal(true);
     } else {
       await axios.delete(
-        `http://localhost:5000/remove-from-cart/${localStorage.getItem(
+        `https://gamestore-api.onrender.com/remove-from-cart/${localStorage.getItem(
           "user"
         )}/${gameData.gameName}`
       );
 
       await axios.put(
-        `http://localhost:5000/update-users/${localStorage.getItem("user")}`,
+        `https://gamestore-api.onrender.com/update-users/${localStorage.getItem(
+          "user"
+        )}`,
         { balance: response.data.balance - gameData.price! }
       );
 
-      await axios.post("http://localhost:5000/buy-game", {
+      await axios.post("https://gamestore-api.onrender.com/buy-game", {
         username: localStorage.getItem("user"),
         gameName: gameData.gameName,
       });

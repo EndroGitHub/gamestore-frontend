@@ -70,7 +70,9 @@ const UserNavBar = (props: { reRender?: boolean }) => {
   const getUserData = async () => {
     await axios
       .get(
-        `http://localhost:5000/get-user-data/${localStorage.getItem("user")}`
+        `https://gamestore-api.onrender.com/get-user-data/${localStorage.getItem(
+          "user"
+        )}`
       )
       .then((res) => {
         setUserName(res.data.username);
@@ -83,7 +85,7 @@ const UserNavBar = (props: { reRender?: boolean }) => {
 
   const getSearchResult = async () => {
     await axios
-      .get(`http://localhost:5000/search-game/${searchText}`)
+      .get(`https://gamestore-api.onrender.com/search-game/${searchText}`)
       .then((res) => {
         if (!res.data.result) {
           setSearchResults(res.data);

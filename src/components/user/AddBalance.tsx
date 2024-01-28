@@ -30,12 +30,16 @@ const AddBalance = () => {
 
   const addBalance = async () => {
     let response = await axios.get(
-      `http://localhost:5000/get-user-data/${localStorage.getItem("user")}`
+      `https://gamestore-api.onrender.com/get-user-data/${localStorage.getItem(
+        "user"
+      )}`
     );
     let newBalance = response.data.balance + balance;
     await axios
       .put(
-        `http://localhost:5000/update-users/${localStorage.getItem("user")}`,
+        `https://gamestore-api.onrender.com/update-users/${localStorage.getItem(
+          "user"
+        )}`,
         { balance: newBalance }
       )
       .then((res) => {
