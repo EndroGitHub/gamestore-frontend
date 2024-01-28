@@ -38,7 +38,7 @@ const Cart = () => {
 
   const getCartData = async () => {
     let res = await axios.get(
-      `https://gamestore-api.onrender.com/get-user-cart/${localStorage.getItem(
+      `https://gamestore-api-3gln.onrender.com/get-user-cart/${localStorage.getItem(
         "user"
       )}`
     );
@@ -49,7 +49,7 @@ const Cart = () => {
         dataArr = [];
       while (i < len) {
         let game_res = await axios.get(
-          `https://gamestore-api.onrender.com/get-game-data/${res.data[i].gameName}`
+          `https://gamestore-api-3gln.onrender.com/get-game-data/${res.data[i].gameName}`
         );
         dataArr[i] = game_res.data;
         i++;
@@ -65,7 +65,7 @@ const Cart = () => {
   const removeHandler = async (gameName: string) => {
     await axios
       .delete(
-        `https://gamestore-api.onrender.com/remove-from-cart/${localStorage.getItem(
+        `https://gamestore-api-3gln.onrender.com/remove-from-cart/${localStorage.getItem(
           "user"
         )}/${gameName}`
       )

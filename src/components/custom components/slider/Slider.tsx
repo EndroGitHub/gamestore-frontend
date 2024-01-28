@@ -68,7 +68,7 @@ const Slider = (props: SliderPropsType) => {
 
   const getNewReleaseData = async () => {
     await axios
-      .get("https://gamestore-api.onrender.com/get-new-releases")
+      .get("https://gamestore-api-3gln.onrender.com/get-new-releases")
       .then((res) => {
         setGameData(res.data);
         setGameDataLength(res.data.length);
@@ -81,7 +81,7 @@ const Slider = (props: SliderPropsType) => {
 
   const getTopDiscountData = async () => {
     await axios
-      .get("https://gamestore-api.onrender.com/get-discount-games")
+      .get("https://gamestore-api-3gln.onrender.com/get-discount-games")
       .then((res) => {
         setGameData(res.data);
         setGameDataLength(res.data.length);

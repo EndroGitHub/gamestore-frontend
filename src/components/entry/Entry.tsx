@@ -95,7 +95,7 @@ const Entry = (props: EntryPropsType) => {
     //for login
     if (location.pathname === "/login") {
       await axios
-        .post("https://gamestore-api.onrender.com/login", {
+        .post("https://gamestore-api-3gln.onrender.com/login", {
           username: username,
           password: password,
         })
@@ -122,7 +122,7 @@ const Entry = (props: EntryPropsType) => {
     if (location.pathname === "/signup") {
       let balance = 0;
       await axios
-        .post("https://gamestore-api.onrender.com/signup", {
+        .post("https://gamestore-api-3gln.onrender.com/signup", {
           username: username,
           password: password,
           balance: balance,

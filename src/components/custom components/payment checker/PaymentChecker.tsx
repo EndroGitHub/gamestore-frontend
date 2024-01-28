@@ -19,7 +19,7 @@ const PaymentChecker = () => {
   const checkFunction = async () => {
     await axios
       .get(
-        `https://gamestore-api.onrender.com/check-game-in-your-games/${localStorage.getItem(
+        `https://gamestore-api-3gln.onrender.com/check-game-in-your-games/${localStorage.getItem(
           "user"
         )}/${param.game_title}`
       )
