@@ -116,23 +116,26 @@ const ShowResults = (props: ShowResultsPropsType) => {
                   : param.category!.toLocaleUpperCase()}
               </h1>
             </span>
-            <span className="show-results-page-buttons">
-              <button
-                onClick={prevButtonHandler}
-                className={page === 1 ? "" : "show-results-button-active"}
-                disabled={page === 1 ? true : false}
-              >
-                prev
-              </button>
-              <p>{page}</p>
-              <button
-                onClick={nextButtonHandler}
-                className={isLastPage ? "" : "show-results-button-active"}
-                disabled={isLastPage ? true : false}
-              >
-                next
-              </button>
-            </span>
+
+            {!isEmpty && (
+              <span className="show-results-page-buttons">
+                <button
+                  onClick={prevButtonHandler}
+                  className={page === 1 ? "" : "show-results-button-active"}
+                  disabled={page === 1 ? true : false}
+                >
+                  prev
+                </button>
+                <p>{page}</p>
+                <button
+                  onClick={nextButtonHandler}
+                  className={isLastPage ? "" : "show-results-button-active"}
+                  disabled={isLastPage ? true : false}
+                >
+                  next
+                </button>
+              </span>
+            )}
 
             {isEmpty ? (
               <div className="show-results-empty">No Results Found</div>
