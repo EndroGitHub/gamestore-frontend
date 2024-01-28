@@ -1,0 +1,233 @@
+.cart-outer {
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 80px;
+  margin-top: 30px;
+  margin-bottom: 80px;
+  display: flex;
+  justify-content: center;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.1)
+  );
+}
+
+/*####################################################################*/
+
+.cart-inner {
+  position: relative;
+  width: 70%;
+}
+
+/*####################################################################*/
+
+.cart-heading {
+  position: absolute;
+  width: 100%;
+  bottom: 100%;
+}
+.cart-heading h1 {
+  margin: 0;
+  font-size: 24px;
+  padding-left: 5px;
+  padding-bottom: 10px;
+  color: white;
+}
+
+/*####################################################################*/
+
+.cart-empty {
+  font-size: 30px;
+  color: white;
+  background: rgb(30, 30, 44);
+  text-align: center;
+  padding: 30px;
+  font-weight: bold;
+}
+
+/*####################################################################*/
+
+.cart-box {
+  position: relative;
+  display: flex;
+  background: rgb(30, 30, 44);
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+/*####################################################################*/
+
+.cart-box img {
+  width: 300px;
+  border: 1px solid rgb(83, 83, 83);
+}
+
+/*####################################################################*/
+
+.cart-data {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.cart-data h1 {
+  font-size: 28px;
+  color: white;
+  padding-left: 20px;
+}
+/* ------------------------------------------------------ */
+.cart-data-div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+/* ------------------------------------------------------ */
+.cart-buttons {
+  align-self: center;
+  padding-left: 20px;
+}
+.cart-buttons button {
+  font-size: 16px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 7px;
+  background: rgb(106, 137, 165);
+}
+.cart-buttons button:hover {
+  cursor: pointer;
+  background: rgb(133, 181, 222);
+}
+.cart-buttons button:nth-child(1) {
+  margin-right: 20px;
+}
+/* ------------------------------------------------------ */
+.cart-price {
+  align-self: center;
+}
+.cart-price p {
+  background: rgb(65, 88, 108);
+  font-size: 20px;
+  color: white;
+  padding: 8px 15px;
+  margin: 0;
+}
+.cart-price span {
+  display: flex;
+}
+.cart-price span p {
+  margin: 0;
+  font-size: 18px;
+}
+.cart-price span p:nth-child(2) {
+  background: rgb(0, 82, 0);
+  color: rgb(136, 255, 0);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/*####################################################################*/
+
+@media (max-width: 1150px) {
+  .cart-inner {
+    width: 95%;
+  }
+}
+@media (max-width: 800px) {
+  .cart-heading h1 {
+    font-size: 20px;
+  }
+  .cart-empty {
+    font-size: 20px;
+  }
+  .cart-box img {
+    width: 200px;
+  }
+  .cart-data h1 {
+    font-size: 20px;
+    padding-left: 12px;
+  }
+  .cart-buttons {
+    padding-left: 12px;
+  }
+  .cart-buttons button {
+    font-size: 14px;
+  }
+  .cart-buttons button:nth-child(1) {
+    margin-right: 12px;
+  }
+  .cart-price p {
+    font-size: 16px;
+  }
+  .cart-price span p {
+    font-size: 14px;
+  }
+  .cart-price span p:nth-child(2) {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 650px) {
+  .cart-inner {
+    width: 100%;
+  }
+  .cart-box img {
+    width: 150px;
+  }
+  .cart-buttons button {
+    padding: 3px 7px;
+    font-size: 12px;
+  }
+  .cart-price p {
+    font-size: 14px;
+    padding: 3px 8px;
+  }
+  .cart-price span p {
+    font-size: 12px;
+  }
+  .cart-price span p:nth-child(2) {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cart-box img {
+    width: 120px;
+    height: 80px;
+  }
+  .cart-data h1 {
+    font-size: 15px;
+  }
+  .cart-buttons button {
+    padding: 3px 5px;
+    font-size: 10px;
+  }
+  .cart-heading h1 {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 400px) {
+  .cart-box img {
+    width: 100px;
+    height: 90px;
+  }
+  .cart-data h1 {
+    font-size: 12px;
+  }
+  .cart-buttons button:nth-child(1) {
+    margin-right: 2px;
+  }
+  .cart-price p {
+    font-size: 12px;
+    padding: 3px 8px;
+  }
+  .cart-price span p {
+    font-size: 10px;
+    padding: 5px 3px;
+  }
+  .cart-price span p:nth-child(2) {
+    font-size: 12px;
+    padding: 5px 3px;
+  }
+}

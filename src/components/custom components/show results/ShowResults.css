@@ -1,0 +1,300 @@
+.show-results-outer {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  padding: 70px 0px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 80px;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.1)
+  );
+}
+
+/*####################################################################*/
+
+.show-results-inner {
+  position: relative;
+  width: 1000px;
+}
+
+/*####################################################################*/
+
+.show-results-heading {
+  position: absolute;
+  width: 100%;
+  bottom: 100%;
+  left: 0;
+  margin: 0;
+  text-align: left;
+  color: white;
+}
+.show-results-heading h1 {
+  margin: 0;
+  padding: 5px;
+  font-size: 24px;
+}
+/* ------------------------------------------------------ */
+.show-results-page-buttons {
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.show-results-page-buttons p {
+  margin: 0;
+  padding: 10px;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+.show-results-page-buttons button {
+  font-size: 16px;
+  background: rgb(133, 133, 133);
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.show-results-button-active:hover {
+  background: rgb(181, 181, 181);
+}
+/* ------------------------------------------------------ */
+.show-results-empty {
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  background: rgb(30, 30, 44);
+  padding: 30px 0px;
+}
+
+/*####################################################################*/
+
+.show-results-section {
+  display: flex;
+  padding: 7px 7px;
+  margin-bottom: 10px;
+  background: rgb(30, 30, 44);
+}
+.show-results-section:hover {
+  background: rgb(52, 52, 64);
+}
+/* ------------------------------------------------------ */
+.show-results-section img {
+  width: 350px;
+}
+/* ------------------------------------------------------ */
+.show-results-data {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.show-results-data h1 {
+  text-align: left;
+  color: white;
+  font-size: 30px;
+  padding-left: 10px;
+}
+/* ------------------------------------------------------ */
+.show-results-data-category {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 12px;
+}
+.show-results-data-category div {
+  align-self: center;
+  display: flex;
+  overflow-x: auto;
+  width: 350px;
+}
+.show-results-data-category div::-webkit-scrollbar {
+  height: 10px;
+  background: transparent;
+}
+.show-results-data-category div::-webkit-scrollbar-thumb {
+  background: grey;
+  border-radius: 12px;
+}
+.show-results-data-category div p {
+  flex-shrink: 0;
+  font-size: 14px;
+  color: white;
+  border: 1px solid white;
+  padding: 5px 10px;
+  margin-right: 10px;
+}
+/* ------------------------------------------------------ */
+.show-results-data-price {
+  align-self: center;
+}
+.show-results-data-price p {
+  margin: 0;
+  background: rgb(65, 88, 108);
+  padding: 7px 12px;
+  font-size: 25px;
+  color: white;
+  text-align: center;
+  vertical-align: bottom;
+}
+.show-results-data-price span {
+  display: flex;
+}
+.show-results-data-price span p {
+  flex-shrink: 0;
+}
+.show-results-data-price span p:nth-child(1) {
+  font-size: 20px;
+}
+.show-results-data-price span p:nth-child(2) {
+  background: rgb(0, 80, 0);
+  font-weight: bold;
+  font-size: 24px;
+  color: rgb(174, 255, 0);
+}
+
+/*####################################################################*/
+
+@media (max-width: 1050px) {
+  .show-results-inner {
+    width: 80%;
+  }
+  .show-results-section img {
+    width: 250px;
+  }
+  .show-results-data-price p {
+    font-size: 16px;
+  }
+  .show-results-data-price span p:nth-child(1) {
+    font-size: 14px;
+  }
+  .show-results-data-price span p:nth-child(2) {
+    font-size: 16px;
+  }
+  .show-results-data h1 {
+    font-size: 24px;
+  }
+  .show-results-data-category div p {
+    font-size: 12px;
+  }
+  .show-results-data-category div {
+    width: 180px;
+  }
+  .show-results-data-category div::-webkit-scrollbar {
+    height: 7px;
+  }
+}
+/* ------------------------------------------------------ */
+@media (max-width: 800px) {
+  .show-results-inner {
+    width: 95%;
+  }
+  .show-results-section img {
+    width: 200px;
+  }
+}
+/* ------------------------------------------------------ */
+@media (max-width: 600px) {
+  .show-results-section img {
+    width: 150px;
+  }
+  .show-results-data h1 {
+    font-size: 16px;
+    margin: 0;
+  }
+  .show-results-data-category div p {
+    font-size: 10px;
+    padding: 3px 5px;
+  }
+  .show-results-data-price p {
+    font-size: 12px;
+    padding: 3px 5px;
+  }
+  .show-results-data-price span p:nth-child(1) {
+    font-size: 10px;
+  }
+  .show-results-data-price span p:nth-child(2) {
+    font-size: 12px;
+  }
+  .show-results-data-category div {
+    width: 150px;
+  }
+  .show-results-data-category div::-webkit-scrollbar {
+    height: 5px;
+  }
+  .show-results-heading h1 {
+    font-size: 16px;
+  }
+  .show-results-page-buttons p {
+    padding: 10px;
+    font-size: 16px;
+  }
+  .show-results-page-buttons button {
+    font-size: 12px;
+    padding: 3px 7px;
+  }
+}
+/* ------------------------------------------------------ */
+@media (max-width: 480px) {
+  .show-results-section img {
+    width: 100px;
+  }
+  .show-results-data h1 {
+    font-size: 14px;
+  }
+  .show-results-data-category div p {
+    font-size: 8px;
+  }
+  .show-results-data-price p {
+    font-size: 12px;
+    padding: 3px 5px;
+  }
+  .show-results-data-price span p:nth-child(1) {
+    font-size: 10px;
+  }
+  .show-results-data-price span p:nth-child(2) {
+    font-size: 12px;
+  }
+  .show-results-data-category div {
+    width: 100px;
+  }
+  .show-results-data-category div::-webkit-scrollbar {
+    height: 5px;
+  }
+  .show-results-data-category {
+    padding-right: 0;
+  }
+}
+
+/* ------------------------------------------------------ */
+@media (max-width: 400px) {
+  .show-results-section img {
+    width: 100px;
+  }
+  .show-results-data h1 {
+    font-size: 12px;
+  }
+  .show-results-data-category div p {
+    font-size: 8px;
+  }
+  .show-results-data-price p {
+    font-size: 10px;
+    padding: 3px 5px;
+  }
+  .show-results-data-price span p:nth-child(1) {
+    font-size: 10px;
+  }
+  .show-results-data-price span p:nth-child(2) {
+    font-size: 10px;
+  }
+  .show-results-data-category div {
+    width: 70px;
+  }
+  .show-results-data-category div::-webkit-scrollbar {
+    height: 5px;
+  }
+}

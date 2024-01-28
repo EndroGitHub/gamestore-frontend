@@ -1,0 +1,309 @@
+.buy-game-outer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0px;
+  margin-top: 30px;
+  margin-bottom: 80px;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.1)
+  );
+}
+
+/*####################################################################*/
+
+.buy-game-div1 {
+  width: 70%;
+}
+
+/*####################################################################*/
+
+.buy-game-container {
+  position: relative;
+  display: flex;
+}
+/* ------------------------------------------------------ */
+.buy-game-heading {
+  position: absolute;
+  width: 100%;
+  color: white;
+  bottom: 100%;
+  left: 0;
+}
+.buy-game-heading h1 {
+  margin: 0;
+  padding: 5px;
+}
+
+/*####################################################################*/
+
+.buy-game-container img {
+  width: 600px;
+  height: 350px;
+  box-shadow: 2px 2px 10px black;
+}
+
+/*####################################################################*/
+
+.buy-game-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: linear-gradient(to right, rgb(16, 17, 23), rgb(31, 33, 45));
+  border: 1px solid rgb(98, 98, 98);
+  border-left: none;
+  color: white;
+}
+/* ------------------------------------------------------ */
+.buy-game-data-des {
+  padding: 0px 10px;
+}
+.buy-game-data-des h1 {
+  font-size: 20px;
+  margin-bottom: 0;
+}
+.buy-game-data-des p {
+  font-size: 16px;
+  margin-top: 20px;
+}
+/* ------------------------------------------------------ */
+.buy-game-data-date {
+  padding-left: 10px;
+  padding-bottom: 10px;
+  font-size: 15px;
+  color: rgb(202, 202, 202);
+}
+.buy-game-data-date span {
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+}
+/* ------------------------------------------------------ */
+.buy-game-data-category {
+  padding-left: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.buy-game-data-category p {
+  font-size: 15px;
+  border: 1px solid rgb(90, 90, 90);
+  margin: 0;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  padding: 5px 12px;
+  flex-shrink: 0;
+}
+.buy-game-data-category p:hover {
+  border-color: white;
+  cursor: pointer;
+}
+
+/*####################################################################*/
+
+.buy-game-div2 {
+  position: relative;
+  width: 70%;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+/* ------------------------------------------------------ */
+.buy-game-buy {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background: rgb(35, 34, 41);
+  border: 2px solid rgb(109, 122, 127);
+  border-radius: 12px;
+}
+/* ------------------------------------------------------ */
+.buy-game-buy-price {
+  font-size: 35px;
+  padding: 20px 12px;
+  color: white;
+}
+.buy-game-buy-price-span {
+  display: flex;
+}
+.buy-game-buy-price-span p {
+  margin: 0;
+  padding: 2px 5px;
+  font-family: sans-serif;
+  font-size: 30px;
+}
+.buy-game-buy-price-span p:nth-child(1) {
+  background-image: linear-gradient(
+    to right,
+    rgb(0, 172, 0),
+    rgba(0, 255, 0, 0)
+  );
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  align-self: flex-start;
+}
+.buy-game-buy-price-span p:nth-child(2) {
+  color: rgb(255, 255, 255);
+}
+/* ------------------------------------------------------ */
+.buy-game-buy-button-view-in-your-games {
+  width: 200px !important;
+  background-image: linear-gradient(
+    to right,
+    rgb(0, 115, 255),
+    rgb(0, 97, 215)
+  );
+  color: white;
+}
+.buy-game-buy-button-view-in-your-games:hover {
+  background-image: linear-gradient(
+    to right,
+    rgb(38, 136, 255),
+    rgb(0, 115, 255)
+  );
+}
+/* ------------------------------------------------------ */
+.buy-game-buy-button {
+  align-self: flex-end;
+  display: flex;
+}
+.buy-game-buy-button button {
+  font-size: 16px;
+  width: 100px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  padding: 5px 0px;
+  margin: 12px;
+}
+.buy-game-add-to-cart-enabled {
+  color: white;
+  background-image: linear-gradient(
+    to right,
+    rgb(0, 115, 255),
+    rgb(0, 97, 215)
+  );
+}
+.buy-game-add-to-cart-enabled:hover {
+  background-image: linear-gradient(
+    to right,
+    rgb(38, 136, 255),
+    rgb(0, 115, 255)
+  );
+}
+.buy-game-add-to-cart-disabled {
+  color: rgb(146, 146, 146);
+  background-image: linear-gradient(to right, rgb(0, 89, 197), rgb(0, 60, 134));
+}
+.buy-game-buy-button button:nth-child(2) {
+  color: white;
+  background-image: linear-gradient(to right, rgb(0, 173, 0), rgb(0, 128, 0));
+}
+.buy-game-buy-button button:nth-child(2):hover {
+  background-image: linear-gradient(to right, rgb(0, 213, 0), rgb(0, 169, 0));
+}
+/*####################################################################*/
+
+@media (max-width: 1300px) {
+  .buy-game-div1 {
+    width: 95%;
+  }
+  .buy-game-div2 {
+    width: 95%;
+  }
+}
+/* ------------------------------------------------------ */
+@media (max-width: 1000px) {
+  .buy-game-container img {
+    width: 500px;
+  }
+}
+/* ------------------------------------------------------ */
+@media (max-width: 900px) {
+  .buy-game-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .buy-game-container img {
+    width: 100%;
+    height: 400px;
+  }
+  .buy-game-data {
+    width: 100%;
+    border: 1px solid rgb(98, 98, 98);
+    border-top: none;
+  }
+}
+/* ------------------------------------------------------ */
+@media (max-width: 700px) {
+  .buy-game-container img {
+    width: 100%;
+    height: 300px;
+  }
+  .buy-game-data {
+    width: 100%;
+  }
+  .buy-game-data-des h1 {
+    font-size: 18px;
+  }
+  .buy-game-data-des p {
+    font-size: 15px;
+  }
+}
+@media (max-width: 500px) {
+  .buy-game-div1 {
+    width: 100%;
+  }
+  .buy-game-div2 {
+    width: 100%;
+  }
+  .buy-game-buy {
+    border-radius: 0px;
+    border: none;
+  }
+  .buy-game-container img {
+    width: 100%;
+    height: 220px;
+  }
+  .buy-game-data {
+    width: 100%;
+    border: none;
+  }
+}
+
+@media (max-width: 400px) {
+  .buy-game-container img {
+    height: 180px;
+  }
+  .buy-game-data-des p {
+    font-size: 14px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+  .buy-game-buy-price-span p:nth-child(2) {
+    font-size: 16px;
+    align-self: center;
+  }
+  .buy-game-buy-price {
+    font-size: 20px;
+  }
+  .buy-game-buy-button button {
+    margin: 0;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    font-size: 12px;
+    width: 150px !important;
+  }
+  .buy-game-buy-button main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .buy-game-buy-button main button {
+    margin-bottom: 5px;
+  }
+}
