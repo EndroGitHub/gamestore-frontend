@@ -52,7 +52,7 @@ const BuyGame = () => {
   const getGameData = async () => {
     await axios
       .get(
-        `https://gamestore-api-3gln.onrender.com/get-game-data/${param.game_title}`
+        `https://gamestore-api-8t9b.onrender.com/get-game-data/${param.game_title}`
       )
       .then((res) => {
         setGameData(res.data);
@@ -69,7 +69,7 @@ const BuyGame = () => {
     if (!localStorage.getItem("guest")) {
       await axios
         .get(
-          `https://gamestore-api-3gln.onrender.com/check-game-in-cart/${localStorage.getItem(
+          `https://gamestore-api-8t9b.onrender.com/check-game-in-cart/${localStorage.getItem(
             "user"
           )}/${param.game_title}`
         )
@@ -84,7 +84,7 @@ const BuyGame = () => {
 
       await axios
         .get(
-          `https://gamestore-api-3gln.onrender.com/check-game-in-your-games/${localStorage.getItem(
+          `https://gamestore-api-8t9b.onrender.com/check-game-in-your-games/${localStorage.getItem(
             "user"
           )}/${param.game_title}`
         )
@@ -106,7 +106,7 @@ const BuyGame = () => {
       setShowGuestModal(true);
     } else {
       await axios
-        .post("https://gamestore-api-3gln.onrender.com/add-to-cart", {
+        .post("https://gamestore-api-8t9b.onrender.com/add-to-cart", {
           username: localStorage.getItem("user"),
           gameName: param.game_title,
         })

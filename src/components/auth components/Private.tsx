@@ -16,7 +16,7 @@ const Private = () => {
 
   const getData = async () => {
     await axios
-      .get("https://gamestore-api-3gln.onrender.com/get-new-releases")
+      .get("https://gamestore-api-8t9b.onrender.com/get-new-releases")
       .then((res) => {
         setData(res.data);
       });

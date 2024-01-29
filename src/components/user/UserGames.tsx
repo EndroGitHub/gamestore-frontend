@@ -24,7 +24,7 @@ const UserGames = () => {
 
   const getGameData = async () => {
     let response = await axios.get(
-      `https://gamestore-api-3gln.onrender.com/get-user-games/${localStorage.getItem(
+      `https://gamestore-api-8t9b.onrender.com/get-user-games/${localStorage.getItem(
         "user"
       )}`
     );
@@ -35,7 +35,7 @@ const UserGames = () => {
       while (i < response.data.length) {
         await axios
           .get(
-            `https://gamestore-api-3gln.onrender.com/get-game-data/${response.data[i].gameName}`
+            `https://gamestore-api-8t9b.onrender.com/get-game-data/${response.data[i].gameName}`
           )
           .then((res) => {
             data[i] = { image: res.data.image, gameName: res.data.title };
