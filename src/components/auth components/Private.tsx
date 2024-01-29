@@ -25,7 +25,9 @@ const Private = () => {
   let authGuest = localStorage.getItem("guest");
 
   return !isConnected ? (
-    <div>Connecting to the server...</div>
+    <div style={{ color: "white", textAlign: "center", fontSize: "28px" }}>
+      Connecting to the server...
+    </div>
   ) : authUser || authGuest ? (
     <Outlet />
   ) : (
