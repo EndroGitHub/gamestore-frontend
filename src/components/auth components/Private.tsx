@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Outlet, Navigate } from "react-router-dom";
+import ConnectionLoader from "../custom components/connection loader/ConnectionLoader";
 
 const Private = () => {
   const [data, setData] = useState([]);
@@ -25,9 +26,7 @@ const Private = () => {
   let authGuest = localStorage.getItem("guest");
 
   return !isConnected ? (
-    <div style={{ color: "white", textAlign: "center", fontSize: "28px" }}>
-      Connecting to the server...
-    </div>
+    <ConnectionLoader />
   ) : authUser || authGuest ? (
     <Outlet />
   ) : (
